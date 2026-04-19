@@ -123,6 +123,20 @@ Configured the DNS settings on `CLIENT01` to point to the domain controller `DC0
 
 ---
 
+## CLIENT01 Domain Join
+
+Joined the `CLIENT01` Windows client machine to the `pouyabey.local` Active Directory domain.
+
+Before joining the domain, I configured the client DNS settings to point to the domain controller `DC01`. After the domain join, the client machine was restarted and verified as a domain-joined workstation.
+
+- Client hostname: `CLIENT01`
+- Domain: `pouyabey.local`
+- Domain Controller / DNS Server: `DC01`
+- DNS Server IP: `192.168.56.10`
+---
+
+
+
 ## Screenshots
 
 ### VMware Lab Setup
@@ -167,6 +181,12 @@ Configured the DNS settings on `CLIENT01` to point to the domain controller `DC0
 ![CLIENT01 DNS Settings](./screenshots/13-client01-dns-settings.png)
 
 ![CLIENT01 DNS Settings](./screenshots/14-client01-dns-settings.png)
+
+### CLIENT01 Domain Membership Verification
+
+![CLIENT01 Domain Membership](./screenshots/15-client01-domain-membership.png)
+
+
 
 
 
