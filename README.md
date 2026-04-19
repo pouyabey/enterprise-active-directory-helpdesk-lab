@@ -174,7 +174,7 @@ The OU structure helps simulate how companies separate departments and resources
 
 Example OU structure:
 
-text
+```text
 pouyabey.local
 │
 ├── RetailCorp
