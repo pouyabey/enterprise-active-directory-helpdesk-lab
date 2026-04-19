@@ -148,6 +148,20 @@ A domain user account was used to sign in to the client machine. The login was v
 - Verified with: `whoami`, `%USERDOMAIN%`, and `%USERNAME%`
 ---
 
+## Shared Folder Permission Test
+
+Tested department-based shared folder permissions from the domain-joined client machine `CLIENT01`.
+
+I logged in with the domain user `pouya.beyranvand`, which is a member of the `IT_Users` security group. The user was able to access the IT shared folder and create/read a test text file, confirming that the correct NTFS permissions were applied.
+
+The same user attempted to access the HR shared folder, but access was denied because the user is not a member of the `HR_Users` group.
+
+| Test User | Group Membership | Folder Tested | Result |
+|---|---|---|---|
+| `pouya.beyranvand` | `IT_Users` | `\\DC01\IT` | Access granted |
+| `pouya.beyranvand` | `IT_Users` | `\\DC01\HR` | Access denied |
+
+---
 
 
 
@@ -203,6 +217,14 @@ A domain user account was used to sign in to the client machine. The login was v
 ### Domain Login Verification
 
 ![Domain Login Verification](./screenshots/16-domain-login-verification.png)
+
+### IT Folder Access Test
+
+![IT Folder Access Test](./screenshots/17-it-folder-access-test.png)
+
+### HR Folder Access Denied
+
+![HR Folder Access Denied](./screenshots/18-hr-access-denied.png)
 
 
 
