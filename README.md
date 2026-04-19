@@ -133,7 +133,21 @@ Before joining the domain, I configured the client DNS settings to point to the 
 - Domain: `pouyabey.local`
 - Domain Controller / DNS Server: `DC01`
 - DNS Server IP: `192.168.56.10`
+
 ---
+
+## Domain Login Test
+
+Tested domain user login on `CLIENT01` after joining the workstation to the `pouyabey.local` domain.
+
+A domain user account was used to sign in to the client machine. The login was verified using Command Prompt.
+
+- Client: `CLIENT01`
+- Domain: `pouyabey.local`
+- Domain User: `pouya.beyranvand`
+- Verified with: `whoami`, `%USERDOMAIN%`, and `%USERNAME%`
+---
+
 
 
 
@@ -185,6 +199,10 @@ Before joining the domain, I configured the client DNS settings to point to the 
 ### CLIENT01 Domain Membership Verification
 
 ![CLIENT01 Domain Membership](./screenshots/15-client01-domain-membership.png)
+
+### Domain Login Verification
+
+![Domain Login Verification](./screenshots/16-domain-login-verification.png)
 
 
 
