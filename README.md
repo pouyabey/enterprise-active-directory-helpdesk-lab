@@ -149,8 +149,10 @@ Configuration:
 
 ![Network Shares Visible](./screenshots/11-network-shares-visible.png)
 
-## CLIENT01 Virtual Machine Screenshots
-![CLIENT01 VM Created](./screenshots/17-client01-vm-created.png)
+### CLIENT01 Virtual Machine Setup
+
+![CLIENT01 VM Created](./screenshots/12-client01-vm-created.png)
+
 
 ---
 
