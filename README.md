@@ -2,19 +2,16 @@
 
 ## Project Overview
 
-This project is a hands-on Windows Server and Active Directory home lab designed to simulate common entry-level Help Desk and IT Support tasks in a small enterprise environment.
+This project is a Windows Server and Active Directory home lab designed to simulate common entry-level Help Desk and IT Support tasks in a small business environment.
 
-The goal of this lab is to practice building a Windows domain environment, creating Active Directory users and groups, organizing resources with OUs, and configuring shared folders with department-based permissions.
-
-This lab is built for practicing real-world Help Desk tasks such as user management, group-based access control, and Windows file sharing.
+The lab includes setting up a domain controller, creating Active Directory users and security groups, organizing resources with OUs, and configuring department-based shared folders with Share and NTFS permissions.
 
 ---
 
 ## Lab Environment
 
-- VMware Workstation / VirtualBox
+- VMware Workstation
 - Windows Server 2025
-- Windows 11 Pro
 - Active Directory Domain Services
 - DNS
 - File Sharing
@@ -22,332 +19,138 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 
 ---
 
-## Lab Network Design
+## Network Design
 
-| Device | Role | Hostname | Notes |
+| Device | Role | Hostname | Status |
 |---|---|---|---|
-| Windows Server | Domain Controller | DC01 | Hosts Active Directory, DNS, and shared folders |
-| Windows 11 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
+| Windows Server | Domain Controller | DC01 | Completed |
+| Windows Client | Domain Client | CLIENT01 | Planned |
 
-Domain name:
-
-`pouyabey.local`
-
-Domain Controller:
-
-`DC01`
-
-Shared folders location:
-
-`C:\Shares`
+- Domain: `pouyabey.local`
+- Domain Controller: `DC01`
+- Shared folder path: `C:\Shares`
 
 ---
 
-## 1. Created the DC01 Virtual Machine in VMware Workstation
+## Completed Work
 
-I used VMware Workstation to create an isolated Windows Server virtual machine named `DC01`. This server will act as the main domain controller for the lab environment.
-
-![DC01 VM Created](./screenshots/01-vmware-lab-overview.png)
-
-
-
----
-
-## 2. Downloaded Windows Server ISO
-
-I downloaded the Windows Server ISO to install the server operating system for the domain controller.
-
-The Windows Server VM will be used to host:
-
-- Active Directory Domain Services
-- DNS
-- Domain user accounts
-- Security groups
-- Shared folders
-
-
-![Windows Server ISO](screenshots/02-windows-server-iso.png)
+| Step | Task | Status |
+|---|---|---|
+| 1 | Created `DC01` virtual machine in VMware Workstation | Completed |
+| 2 | Attached Windows Server ISO | Completed |
+| 3 | Prepared Windows client VM plan | Planned |
+| 4 | Configured static IP on `DC01` | Completed |
+| 5 | Installed Active Directory Domain Services | Completed |
+| 6 | Promoted `DC01` to Domain Controller | Completed |
+| 7 | Created domain `pouyabey.local` | Completed |
+| 8 | Created OU structure for users, groups, and computers | Completed |
+| 9 | Created department-based user accounts | Completed |
+| 10 | Created department-based security groups | Completed |
+| 11 | Created shared folders for each department | Completed |
+| 12 | Configured Share and NTFS permissions | Completed |
+| 13 | Verified network shares from `\\DC01` | Completed |
 
 ---
 
-## 3. Prepared for Windows Client VM
-
-A Windows 10/11 client VM will be created in the next phase of this lab. The client machine will be joined to the `pouyabey.local` domain and used to test domain login and shared folder access.
-
-Status: Planned for next phase.
-
----
-
-## 4. Configured Static IP on DC01
-
-I configured a static IP address on the domain controller. A domain controller should have a static IP address because client machines need to consistently locate it for DNS and Active Directory services.
-
-Example configuration:
-
-- IP Address: `192.168.56.10`
-- Subnet Mask: `255.255.255.0`
-- Default Gateway: `192.168.56.2`
-- Preferred DNS: `172.0.0.1`
-
-![Static ip add](./screenshots/05-dc01-static-ip.png)
-
----
-
-## 5. Installed Active Directory Domain Services
-
-I installed the Active Directory Domain Services role on `DC01` using Server Manager.
-
-This role allows the server to manage domain users, computers, groups, and policies.
-
-![Install AD DS](./screenshots/05-ad-ds-role-installed.png)
-
----
-
-## 6. Promoted DC01 to Domain Controller
-
-After installing AD DS, I promoted `DC01` to a domain controller.
-
-This step converts the Windows Server machine into the main server responsible for managing the domain.
-
-**Screenshot to add:**
-
-`/screenshots/07-dc01-promoted-domain-controller.png`
-
-Suggested screenshot: Server Manager or promotion wizard completion screen.
-
----
-
-## 8. Created the Domain: retailcorp.local
-
-I created a new Active Directory forest with the domain name:
-
-`retailcorp.local`
-
-This domain simulates a small business environment called RetailCorp.
-
-**Screenshot to add:**
-
-`/screenshots/08-domain-retailcorp-created.png`
-
-Suggested screenshot: Active Directory Users and Computers showing `retailcorp.local`.
-
----
-
-## 9. Created Organizational Units
-
-I created Organizational Units to organize users, groups, and computers in a structured way.
-
-The OU structure helps simulate how companies separate departments and resources in Active Directory.
-
-Example OU structure:
+## Active Directory Structure
 
 ```text
 pouyabey.local
-│
+|
 ├── RetailCorp
-│   ├── Users
-│   ├── Groups
-│   └── Computers
+|   ├── Users
+|   |   ├── HR
+|   |   ├── Finance
+|   |   ├── IT
+|   |   ├── Operations
+|   |   └── Sales
+|   ├── Groups
+|   └── Computers
+
+
+
 ```
-Inside the Users OU, I created department-based OUs:
-
-- HR
-- Finance
-- IT
-- Operations
-- Sales
-
-**Screenshot:**
-
-![OU Structure](./screenshots/09-ou-structure.png)
 
 ---
 
-## 10. Created Users
+## Users and Groups
 
-I created test user accounts to represent employees in different departments.
+| Department | Security Group | Shared Folder |
+|---|---|---|
+| HR | `HR_Users` | `\\DC01\HR` |
+| Finance | `Finance_Users` | `\\DC01\Finance` |
+| IT | `IT_Users` | `\\DC01\IT` |
+| Operations | `Operation_Users` | `\\DC01\Operations` |
+| Sales | `Sales_Users` | `\\DC01\Sales` |
 
-Example users:
-
-| User | Department |
-|---|---|
-| HR User | HR |
-| Finance User | Finance |
-| IT User | IT |
-| Operations User | Operations |
-| Sales User | Sales |
-
-These accounts will later be used to test domain login and department-based folder access.
-
-**Screenshot:**
-
-![Users Created](./screenshots/10-users-created.png)
+Each department user was added to the matching department security group.
 
 ---
 
-## 11. Created Security Groups
+## Shared Folder Permission Model
 
-I created department-based security groups to manage folder access.
-
-Groups created:
-
-- `HR_Users`
-- `Finance_Users`
-- `IT_Users`
-- `Operation_Users`
-- `Sales_Users`
-
-Each user was added to their matching department group.
-
-Example:
-
-- HR user → `HR_Users`
-- Finance user → `Finance_Users`
-- IT user → `IT_Users`
-- Operations user → `Operation_Users`
-- Sales user → `Sales_Users`
-
-Using groups instead of assigning permissions directly to individual users is a better practice because it makes access management easier and more scalable.
-
-**Screenshot:**
-
-![Security Groups Created](./screenshots/11-security-groups-created.png)
-
-**Optional screenshot:**
-
-![User Added to Group](./screenshots/11-user-added-to-group.png)
-
----
-
-## 12. Created Shared Folders
-
-I created department-based shared folders on the domain controller to simulate company file shares.
-
-Folder location on DC01:
-
-`C:\Shares`
-
-Folders created:
-
-- `C:\Shares\HR`
-- `C:\Shares\Finance`
-- `C:\Shares\IT`
-- `C:\Shares\Operations`
-- `C:\Shares\Sales`
-
-Network share paths:
-
-- `\\DC01\HR`
-- `\\DC01\Finance`
-- `\\DC01\IT`
-- `\\DC01\Operations`
-- `\\DC01\Sales`
-
-**Screenshot:**
-
-![Shared Folders Structure](./screenshots/12-shares-folder-structure.png)
-
----
-
-## Shared Folder Permissions
-
-For this lab, I configured both Share permissions and NTFS permissions.
-
-Share permissions control access to the folder over the network.
-
-NTFS permissions control the actual permissions on the folder and files.
-
-For this lab, I used the following approach:
+For this lab, I used Share permissions and NTFS permissions together:
 
 - Share Permission: `Everyone = Full Control`
 - NTFS Permission: `Department Group = Modify`
 
-This means the share is reachable over the network, but the actual access is controlled by NTFS permissions.
+This allows the shares to be reachable over the network while NTFS permissions control the actual folder access.
 
-Department access design:
-
-| Shared Folder | Network Path | Allowed Group | NTFS Permission |
-|---|---|---|---|
-| HR | `\\DC01\HR` | `HR_Users` | Modify |
-| Finance | `\\DC01\Finance` | `Finance_Users` | Modify |
-| IT | `\\DC01\IT` | `IT_Users` | Modify |
-| Operations | `\\DC01\Operations` | `Operation_Users` | Modify |
-| Sales | `\\DC01\Sales` | `Sales_Users` | Modify |
-
-**Screenshot:**
-
-![HR Advanced Sharing](./screenshots/13-hr-advanced-sharing.png)
-
-**Screenshot:**
-
-![HR Share Permissions](./screenshots/14-hr-share-permissions.png)
-
-**Screenshot:**
-
-![HR NTFS Permissions](./screenshots/15-hr-ntfs-permissions.png)
+| Shared Folder | Allowed Group | NTFS Permission |
+|---|---|---|
+| `\\DC01\HR` | `HR_Users` | Modify |
+| `\\DC01\Finance` | `Finance_Users` | Modify |
+| `\\DC01\IT` | `IT_Users` | Modify |
+| `\\DC01\Operations` | `Operation_Users` | Modify |
+| `\\DC01\Sales` | `Sales_Users` | Modify |
 
 ---
 
-## Verified Network Shares
+## Screenshots
 
-I verified that the shared folders are visible from the network path:
+### VMware Lab Setup
 
-`\\DC01`
+![VMware Lab Overview](./screenshots/01-vmware-lab-overview.png)
 
-The department shares appeared successfully.
+### Static IP Configuration
 
-The following default Active Directory shares also appeared:
+![Static IP Configuration](./screenshots/05-dc01-static-ip.png)
 
-- `NETLOGON`
-- `SYSVOL`
+### Active Directory Domain Services
 
-These are normal system shares automatically created on a domain controller. `NETLOGON` and `SYSVOL` are used by Active Directory for domain logon and Group Policy-related files.
+![AD DS Installed](./screenshots/06-ad-ds-role-installed.png)
 
-**Screenshot:**
+### Organizational Unit Structure
+
+![OU Structure](./screenshots/09-ou-structure.png)
+
+### Users and Security Groups
+
+![Users Created](./screenshots/10-users-created.png)
+
+![Security Groups Created](./screenshots/11-security-groups-created.png)
+
+### Shared Folders and Permissions
+
+![Shared Folders Structure](./screenshots/12-shares-folder-structure.png)
+
+![HR NTFS Permissions](./screenshots/15-hr-ntfs-permissions.png)
+
+### Network Shares Verification
 
 ![Network Shares Visible](./screenshots/16-network-shares-visible.png)
 
 ---
 
-## Current Lab Status
+## Current Status
 
-Completed so far:
+This phase of the lab is complete through shared folder creation and permissions.
 
-- Installed VMware Workstation
-- Created the `DC01` server VM
-- Configured static IP on `DC01`
-- Installed Active Directory Domain Services
-- Promoted `DC01` to Domain Controller
-- Created the `retailcorp.local` domain
-- Created Organizational Units
-- Created users
-- Created security groups
-- Created department-based shared folders
-- Configured share and NTFS permissions
-- Verified network shares from `\\DC01`
+Next phase:
 
-Next steps:
-
-- Create `CLIENT01` Windows client VM
-- Set DNS on `CLIENT01` to the DC01 IP address
-- Join `CLIENT01` to the domain
+- Create `CLIENT01`
+- Configure DNS on `CLIENT01`
+- Join `CLIENT01` to `pouyabey.local`
 - Test domain login
-- Test shared folder permissions
+- Test shared folder access
 - Practice Help Desk scenarios such as password reset, account unlock, and folder access troubleshooting
-
----
-
-## Screenshot Checklist
-
-- `./screenshots/09-ou-structure.png`
-- `./screenshots/10-users-created.png`
-- `./screenshots/11-security-groups-created.png`
-- `./screenshots/11-user-added-to-group.png`
-- `./screenshots/12-shares-folder-structure.png`
-- `./screenshots/13-hr-advanced-sharing.png`
-- `./screenshots/14-hr-share-permissions.png`
-- `./screenshots/15-hr-ntfs-permissions.png`
-- `./screenshots/16-network-shares-visible.png`
-
-
-
