@@ -181,7 +181,7 @@ pouyabey.local
 │   ├── Users
 │   ├── Groups
 │   └── Computers
-
+```
 Inside the Users OU, I created department-based OUs:
 
 - HR
