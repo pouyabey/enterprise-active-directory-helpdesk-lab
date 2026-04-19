@@ -48,7 +48,7 @@ Shared folders location:
 I used virtualization software to create an isolated lab environment for Windows Server and Windows client machines. This allows me to safely practice system administration and Help Desk tasks without affecting a real production environment.
 
 
-![](screenshots01-vmware-lab-overview.png)
+![VMware-overview](screenshots01-vmware-lab-overview.png)
 
 
 ---
