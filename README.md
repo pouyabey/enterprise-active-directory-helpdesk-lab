@@ -109,11 +109,11 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ### Static IP Configuration
 
-![Static IP Configuration](./screenshots/04-dc01-static-ip.png)
+![Static IP Configuration](./screenshots/03-dc01-static-ip.png)
 
 ### Active Directory Domain Services
 
-![AD DS Installed](./screenshots/05-ad-ds-role-installed.png)
+![AD DS Installed](./screenshots/04-ad-ds-role-installed.png)
 
 ### Organizational Unit Structure
 
