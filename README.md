@@ -84,10 +84,10 @@ I configured a static IP address on the domain controller. A domain controller s
 
 Example configuration:
 
-- IP Address: `192.168.10.10`
+- IP Address: `192.168.56.10`
 - Subnet Mask: `255.255.255.0`
-- Default Gateway: `192.168.10.1`
-- Preferred DNS: `192.168.10.10`
+- Default Gateway: `192.168.56.2`
+- Preferred DNS: `172.0.0.1`
 
 ![Static ip add](./screenshots/05-dc01-static-ip.png)
 
