@@ -127,9 +127,9 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ### Shared Folders and Permissions
 
-![Shared Folders Structure](./screenshots/12-shares-folder-structure.png)
+![Shared Folders Structure](./screenshots/09-shares-folder-structure.png)
 
-![HR NTFS Permissions](./screenshots/15-hr-ntfs-permissions.png)
+![HR NTFS Permissions](./screenshots/10-hr-ntfs-permissions.png)
 
 ### Network Shares Verification
 
