@@ -101,6 +101,20 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ---
 
+## CLIENT01 Virtual Machine
+
+I created a Windows client virtual machine named `CLIENT01` in VMware Workstation. This machine will be used to test domain joining, domain user login, and shared folder access.
+
+Configuration:
+
+- Hostname: `CLIENT01`
+- Operating System: Windows 10/11 Pro
+- Network Adapter: Same virtual network as `DC01`
+- Purpose: Domain-joined client workstation for Help Desk testing
+---
+
+
+
 ## Screenshots
 
 ### VMware Lab Setup
@@ -135,6 +149,9 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ![Network Shares Visible](./screenshots/11-network-shares-visible.png)
 
+## CLIENT01 Virtual Machine Screenshots
+![CLIENT01 VM Created](./screenshots/17-client01-vm-created.png)
+
 ---
 
 ## Current Status
@@ -149,3 +166,5 @@ Next phase:
 - Test domain login
 - Test shared folder access
 - Practice Help Desk scenarios such as password reset, account unlock, and folder access troubleshooting
+
+
