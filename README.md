@@ -103,7 +103,7 @@ This role allows the server to manage domain users, computers, groups, and polic
 
 ---
 
-## 7. Promoted DC01 to Domain Controller
+## 6. Promoted DC01 to Domain Controller
 
 After installing AD DS, I promoted `DC01` to a domain controller.
 
