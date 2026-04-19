@@ -119,11 +119,11 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ![OU Structure](./screenshots/06-ou-structure.png)
 
-### Users and Security Groups
+### Users and  Groups
 
-![Users Created](./screenshots/10-users-created.png)
+![Users Created](./screenshots/07-users-created.png)
 
-![Security Groups Created](./screenshots/11-security-groups-created.png)
+![Security Groups Created](./screenshots/08-groups-created.png)
 
 ### Shared Folders and Permissions
 
