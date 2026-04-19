@@ -13,8 +13,8 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 ## Lab Environment
 
 - VMware Workstation / VirtualBox
-- Windows Server 2025
-- Windows 11 Pro
+- Windows Server 2022
+- Windows 10/11 Pro
 - Active Directory Domain Services
 - DNS
 - File Sharing
@@ -27,11 +27,11 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 | Device | Role | Hostname | Notes |
 |---|---|---|---|
 | Windows Server | Domain Controller | DC01 | Hosts Active Directory, DNS, and shared folders |
-| Windows 11 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
+| Windows 10/11 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
 
 Domain name:
 
-`pouyabey.local`
+`retailcorp.local`
 
 Domain Controller:
 
@@ -47,9 +47,11 @@ Shared folders location:
 
 I used virtualization software to create an isolated lab environment for Windows Server and Windows client machines. This allows me to safely practice system administration and Help Desk tasks without affecting a real production environment.
 
+**Screenshot to add:**
 
-![VMware Lab Overview](./screenshots/01-vmware-lab-overview.png)
+`/screenshots/01-vmware-lab-overview.png`
 
+Suggested screenshot: VMware/VirtualBox window showing the created virtual machines, especially `DC01`.
 
 ---
 
@@ -65,17 +67,23 @@ The Windows Server VM will be used to host:
 - Security groups
 - Shared folders
 
+**Screenshot to add:**
 
-![Windows Server ISO Selected](./screenshots/02-windows-server-iso.png)
+`/screenshots/02-windows-server-iso.png`
 
+Suggested screenshot: Windows Server ISO file or VM setup screen showing the ISO selected.
 
 ---
 
-## 3. Prepared for Windows Client VM
+## 3. Downloaded Windows 10/11 ISO
 
-A Windows 11 client VM will be created in the next phase of this lab. The client machine will be joined to the `pouyabey.local` domain and used to test domain login and shared folder access.
+I also downloaded a Windows 10/11 ISO to create a client workstation. This client machine will later be joined to the domain and used to test domain login and shared folder access.
 
-Status: Planned for next phase.
+**Screenshot to add:**
+
+`/screenshots/03-windows-client-iso.png`
+
+Suggested screenshot: Windows 10/11 ISO file or VM setup screen showing the ISO selected.
 
 ---
 
@@ -166,12 +174,13 @@ The OU structure helps simulate how companies separate departments and resources
 
 Example OU structure:
 
+```text
+retailcorp.local
 │
 ├── RetailCorp
 │   ├── Users
 │   ├── Groups
 │   └── Computers
-
 
 Inside the Users OU, I created department-based OUs:
 
