@@ -72,7 +72,7 @@ The Windows Server VM will be used to host:
 
 ## 3. Prepared for Windows Client VM
 
-A Windows 10/11 client VM will be created in the next phase of this lab. The client machine will be joined to the `retailcorp.local` domain and used to test domain login and shared folder access.
+A Windows 10/11 client VM will be created in the next phase of this lab. The client machine will be joined to the `pouyabey.local` domain and used to test domain login and shared folder access.
 
 Status: Planned for next phase.
 
