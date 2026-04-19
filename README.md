@@ -117,7 +117,7 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ### Organizational Unit Structure
 
-![OU Structure](./screenshots/09-ou-structure.png)
+![OU Structure](./screenshots/06-ou-structure.png)
 
 ### Users and Security Groups
 
