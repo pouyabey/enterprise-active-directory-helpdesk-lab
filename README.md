@@ -27,7 +27,7 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 | Device | Role | Hostname | Notes |
 |---|---|---|---|
 | Windows Server | Domain Controller | DC01 | Hosts Active Directory, DNS, and shared folders |
-| Windows 111 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
+| Windows 11 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
 
 Domain name:
 
