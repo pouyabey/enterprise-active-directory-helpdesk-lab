@@ -232,17 +232,5 @@ The same user attempted to access the HR shared folder, but access was denied be
 
 ---
 
-## Current Status
-
-This phase of the lab is complete through shared folder creation and permissions.
-
-Next phase:
-
-- Create `CLIENT01`
-- Configure DNS on `CLIENT01`
-- Join `CLIENT01` to `pouyabey.local`
-- Test domain login
-- Test shared folder access
-- Practice Help Desk scenarios such as password reset, account unlock, and folder access troubleshooting
 
 
