@@ -133,7 +133,7 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ### Network Shares Verification
 
-![Network Shares Visible](./screenshots/16-network-shares-visible.png)
+![Network Shares Visible](./screenshots/11-network-shares-visible.png)
 
 ---
 
