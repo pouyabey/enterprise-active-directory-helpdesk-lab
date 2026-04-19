@@ -13,8 +13,8 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 ## Lab Environment
 
 - VMware Workstation / VirtualBox
-- Windows Server 2022
-- Windows 10/11 Pro
+- Windows Server 2025
+- Windows 11 Pro
 - Active Directory Domain Services
 - DNS
 - File Sharing
@@ -27,11 +27,11 @@ This lab is built for practicing real-world Help Desk tasks such as user managem
 | Device | Role | Hostname | Notes |
 |---|---|---|---|
 | Windows Server | Domain Controller | DC01 | Hosts Active Directory, DNS, and shared folders |
-| Windows 10/11 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
+| Windows 111 Client | Domain Client | CLIENT01 | Will be joined to the domain in the next phase |
 
 Domain name:
 
-`retailcorp.local`
+`pouyabey.local`
 
 Domain Controller:
 
