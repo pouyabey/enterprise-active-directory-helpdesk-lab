@@ -45,13 +45,9 @@ Shared folders location:
 
 ## 1. Installed VMware / VirtualBox
 
-I used virtualization software to create an isolated lab environment for Windows Server and Windows client machines. This allows me to safely practice system administration and Help Desk tasks without affecting a real production environment.
+I used VMware Workstation to create an isolated lab environment for Windows Server and Windows client machines. This allows me to safely practice system administration and Help Desk tasks without affecting a real production environment.
 
-**Screenshot to add:**
-
-`/screenshots/01-vmware-lab-overview.png`
-
-Suggested screenshot: VMware/VirtualBox window showing the created virtual machines, especially `DC01`.
+![VMware Lab Overview](./screenshots/01-vmware-lab-overview.png)
 
 ---
 
