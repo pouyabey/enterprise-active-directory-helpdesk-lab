@@ -43,11 +43,13 @@ Shared folders location:
 
 ---
 
-## 1. Installed VMware / VirtualBox
+## 1. Created the DC01 Virtual Machine in VMware Workstation
 
-I used VMware Workstation to create an isolated lab environment for Windows Server and Windows client machines. This allows me to safely practice system administration and Help Desk tasks without affecting a real production environment.
+I used VMware Workstation to create an isolated Windows Server virtual machine named `DC01`. This server will act as the main domain controller for the lab environment.
 
-![VMware Lab Overview](./screenshots/01-vmware-lab-overview.png)
+![DC01 VM Created](./screenshots/01-vmware-lab-overview.png)
+
+
 
 ---
 
@@ -76,23 +78,7 @@ Status: Planned for next phase.
 
 ---
 
-## 4. Created the DC01 Virtual Machine
-
-I created a Windows Server virtual machine and named it:
-
-`DC01`
-
-This server will act as the main domain controller for the lab environment.
-
-**Screenshot to add:**
-
-`/screenshots/04-dc01-vm-created.png`
-
-Suggested screenshot: VMware/VirtualBox showing the `DC01` virtual machine.
-
----
-
-## 5. Configured Static IP on DC01
+## 4. Configured Static IP on DC01
 
 I configured a static IP address on the domain controller. A domain controller should have a static IP address because client machines need to consistently locate it for DNS and Active Directory services.
 
