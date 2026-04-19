@@ -63,11 +63,8 @@ The Windows Server VM will be used to host:
 - Security groups
 - Shared folders
 
-**Screenshot to add:**
 
-`/screenshots/02-windows-server-iso.png`
-
-Suggested screenshot: Windows Server ISO file or VM setup screen showing the ISO selected.
+![Windows Server ISO](screenshots/02-windows-server-iso.png)
 
 ---
 
