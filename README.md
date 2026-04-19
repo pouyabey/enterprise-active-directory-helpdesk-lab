@@ -71,15 +71,11 @@ The Windows Server VM will be used to host:
 
 ---
 
-## 3. Downloaded Windows 10/11 ISO
+## 3. Prepared for Windows Client VM
 
-I also downloaded a Windows 10/11 ISO to create a client workstation. This client machine will later be joined to the domain and used to test domain login and shared folder access.
+A Windows 11 client VM will be created in the next phase of this lab. The client machine will be joined to the `pouyabey.local` domain and used to test domain login and shared folder access.
 
-**Screenshot to add:**
-
-`/screenshots/03-windows-client-iso.png`
-
-Suggested screenshot: Windows 10/11 ISO file or VM setup screen showing the ISO selected.
+Status: Planned for next phase.
 
 ---
 
