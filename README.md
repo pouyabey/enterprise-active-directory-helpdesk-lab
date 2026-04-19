@@ -93,17 +93,13 @@ Example configuration:
 
 ---
 
-## 6. Installed Active Directory Domain Services
+## 5. Installed Active Directory Domain Services
 
 I installed the Active Directory Domain Services role on `DC01` using Server Manager.
 
 This role allows the server to manage domain users, computers, groups, and policies.
 
-**Screenshot to add:**
-
-`/screenshots/06-ad-ds-role-installed.png`
-
-Suggested screenshot: Server Manager showing Active Directory Domain Services installed.
+![Install AD DS](./screenshots/05-ad-ds-role-installed.png)
 
 ---
 
