@@ -24,7 +24,7 @@ The lab includes setting up a domain controller, creating Active Directory users
 | Device | Role | Hostname | Status |
 |---|---|---|---|
 | Windows Server | Domain Controller | DC01 | Completed |
-| Windows Client | Domain Client | CLIENT01 | Planned |
+| Windows Client | Domain Client | CLIENT01 | Completed |
 
 - Domain: `pouyabey.local`
 - Domain Controller: `DC01`
@@ -38,7 +38,7 @@ The lab includes setting up a domain controller, creating Active Directory users
 |---|---|---|
 | 1 | Created `DC01` virtual machine in VMware Workstation | Completed |
 | 2 | Attached Windows Server ISO | Completed |
-| 3 | Prepared Windows client VM plan | Planned |
+| 3 | | 3 | Downloaded Windows 10/11 ISO for CLIENT01 | Completed |
 | 4 | Configured static IP on `DC01` | Completed |
 | 5 | Installed Active Directory Domain Services | Completed |
 | 6 | Promoted `DC01` to Domain Controller | Completed |
