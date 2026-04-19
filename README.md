@@ -67,7 +67,7 @@ The Windows Server VM will be used to host:
 
 **Screenshot to add:**
 
-`/screenshots/02-windows-server-iso.png`
+`screenshots01-vmware-lab-overview.png`
 
 Suggested screenshot: Windows Server ISO file or VM setup screen showing the ISO selected.
 
