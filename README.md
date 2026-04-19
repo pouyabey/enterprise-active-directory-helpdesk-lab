@@ -57,17 +57,16 @@ The lab includes setting up a domain controller, creating Active Directory users
 ```text
 pouyabey.local
 |
-├── RetailCorp
-|   ├── Users
-|   |   ├── HR
-|   |   ├── Finance
-|   |   ├── IT
-|   |   ├── Operations
-|   |   └── Sales
-|   ├── Groups
-|   └── Computers
+├── Computers
+├── Departments
+|   ├── HR
+|   ├── Finance
+|   ├── IT
+|   ├── Operations
+|   └── Sales
+├── Groups
+└── Users
 ```
----
 
 ## Users and Groups
 
