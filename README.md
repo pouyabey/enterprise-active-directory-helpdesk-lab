@@ -66,11 +66,7 @@ pouyabey.local
 |   |   └── Sales
 |   ├── Groups
 |   └── Computers
-
-
-
 ```
-
 ---
 
 ## Users and Groups
