@@ -113,7 +113,15 @@ Configuration:
 - Purpose: Domain-joined client workstation for Help Desk testing
 ---
 
+## CLIENT01 DNS Configuration
 
+Configured the DNS settings on `CLIENT01` to point to the domain controller `DC01`. This allows the client machine to locate the Active Directory domain and prepare for domain join.
+
+- CLIENT01 IP Address: `192.168.56.20`
+- Preferred DNS Server: `192.168.56.10`
+- DNS Server: `DC01`
+
+---
 
 ## Screenshots
 
@@ -152,6 +160,14 @@ Configuration:
 ### CLIENT01 Virtual Machine Setup
 
 ![CLIENT01 VM Created](./screenshots/12-client01-vm-created.png)
+
+
+### CLIENT01 DNS Settings
+
+![CLIENT01 DNS Settings](./screenshots/13-client01-dns-settings.png)
+
+![CLIENT01 DNS Settings](./screenshots/14-client01-dns-settings.png)
+
 
 
 ---
