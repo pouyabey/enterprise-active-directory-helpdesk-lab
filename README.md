@@ -89,11 +89,7 @@ Example configuration:
 - Default Gateway: `192.168.10.1`
 - Preferred DNS: `192.168.10.10`
 
-**Screenshot to add:**
-
-`/screenshots/05-dc01-static-ip.png`
-
-Suggested screenshot: IPv4 properties page showing the static IP configuration.
+![Static ip add](./screenshots/05-dc01-static-ip.png)
 
 ---
 
