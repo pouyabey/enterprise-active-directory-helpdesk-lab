@@ -12,9 +12,12 @@ The lab includes setting up a domain controller, creating Active Directory users
 
 - VMware Workstation
 - Windows Server 2025
+- Windows 11 Pro Client
 - Active Directory Domain Services
 - DNS
+- Group Policy Management
 - File Sharing
+- Share Permissions
 - NTFS Permissions
 
 ---
