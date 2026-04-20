@@ -34,21 +34,33 @@ The lab includes setting up a domain controller, creating Active Directory users
 
 ## Completed Work
 
+## Completed Work
+
 | Step | Task | Status |
 |---|---|---|
 | 1 | Created `DC01` virtual machine in VMware Workstation | Completed |
-| 2 | Attached Windows Server ISO | Completed |
-| 3 | Downloaded Windows 11 ISO for CLIENT01 | planned |
+| 2 | Attached Windows Server ISO to `DC01` | Completed |
+| 3 | Downloaded Windows 11 ISO for `CLIENT01` | Completed |
 | 4 | Configured static IP on `DC01` | Completed |
 | 5 | Installed Active Directory Domain Services | Completed |
 | 6 | Promoted `DC01` to Domain Controller | Completed |
 | 7 | Created domain `pouyabey.local` | Completed |
-| 8 | Created OU structure for users, groups, and computers | Completed |
+| 8 | Created OU structure for computers, departments, groups, and users | Completed |
 | 9 | Created department-based user accounts | Completed |
 | 10 | Created department-based security groups | Completed |
 | 11 | Created shared folders for each department | Completed |
 | 12 | Configured Share and NTFS permissions | Completed |
-| 13 | Verified network shares from `\\DC01` | Completed |
+| 13 | Created `CLIENT01` virtual machine | Completed |
+| 14 | Configured `CLIENT01` DNS to point to `DC01` | Completed |
+| 15 | Joined `CLIENT01` to the `pouyabey.local` domain | Completed |
+| 16 | Tested domain user login on `CLIENT01` | Completed |
+| 17 | Tested shared folder permissions | Completed |
+| 18 | Practiced password reset in Active Directory | Completed |
+| 19 | Practiced account unlock in Active Directory | Completed |
+| 20 | Practiced folder access troubleshooting | Completed |
+| 21 | Captured screenshots for documentation | Completed |
+| 22 | Wrote GitHub README documentation | Completed |
+| 23 | Prepared project for resume/portfolio use | Completed |
 
 ---
 
