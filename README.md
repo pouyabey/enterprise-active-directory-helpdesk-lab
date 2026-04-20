@@ -177,6 +177,21 @@ In this scenario, the domain user `pouya.beyranvand` was treated as a user who f
 | Tested login from CLIENT01 | Successful |
 ---
 
+## Account Unlock Practice
+
+Practiced a common Help Desk scenario by locking and unlocking a domain user account.
+
+In this scenario, the domain user `pouya.beyranvand` entered the wrong password multiple times on `CLIENT01`, which triggered the domain account lockout policy. The account was then unlocked from Active Directory Users and Computers on `DC01`, and the user was able to log in successfully again.
+
+| Task | Result |
+|---|---|
+| Configured account lockout policy | Completed |
+| Triggered account lockout with failed login attempts | Completed |
+| Unlocked account in Active Directory | Completed |
+| Verified successful login after unlock | Completed |
+
+---
+
 
 ## Screenshots
 
@@ -247,6 +262,20 @@ In this scenario, the domain user `pouya.beyranvand` was treated as a user who f
 ### Password Reset Success
 
 ![Password Reset Success](./screenshots/20-password-reset-success.png)
+
+
+### Account Locked Message
+
+![Account Locked Message](./screenshots/21-account-locked-message.png)
+
+### Account Lockout Policy
+
+![Account Lockout Policy](./screenshots/22-account-lockout-policy.png)
+
+### Unlock Account in Active Directory
+
+![Unlock Account in ADUC](./screenshots/23-unlock-account-aduc.png)
+
 
 
 
