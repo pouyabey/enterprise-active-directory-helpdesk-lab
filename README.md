@@ -122,19 +122,19 @@ This allows the shares to be reachable over the network while NTFS permissions c
 
 ## CLIENT01 Virtual Machine
 
-I created a Windows client virtual machine named `CLIENT01` in VMware Workstation. This machine will be used to test domain joining, domain user login, and shared folder access.
+I created a Windows 11 Pro client virtual machine named `CLIENT01` in VMware Workstation. This machine was used to test domain joining, domain user login, shared folder access, and Help Desk troubleshooting scenarios.
 
 Configuration:
 
 - Hostname: `CLIENT01`
-- Operating System: Windows 10/11 Pro
+- Operating System: Windows 11 Pro
 - Network Adapter: Same virtual network as `DC01`
 - Purpose: Domain-joined client workstation for Help Desk testing
 ---
 
 ## CLIENT01 DNS Configuration
 
-Configured the DNS settings on `CLIENT01` to point to the domain controller `DC01`. This allows the client machine to locate the Active Directory domain and prepare for domain join.
+Configured the DNS settings on `CLIENT01` to point to the domain controller `DC01`. This allows the client machine to locate the Active Directory domain and authenticate against the domain controller.
 
 - CLIENT01 IP Address: `192.168.56.20`
 - Preferred DNS Server: `192.168.56.10`
