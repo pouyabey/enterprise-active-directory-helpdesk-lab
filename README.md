@@ -26,12 +26,16 @@ The lab includes setting up a domain controller, creating Active Directory users
 
 | Device | Role | Hostname | Status |
 |---|---|---|---|
-| Windows Server | Domain Controller | DC01 | Completed |
-| Windows Client | Domain Client | CLIENT01 | planned |
+| Windows Server | Domain Controller | `DC01` | Completed |
+| Windows 11 Pro Client | Domain-Joined Client | `CLIENT01` | Completed |
 
 - Domain: `pouyabey.local`
 - Domain Controller: `DC01`
+- Domain Client: `CLIENT01`
 - Shared folder path: `C:\Shares`
+- DC01 IP Address: `192.168.56.10`
+- CLIENT01 IP Address: `192.168.56.20`
+- CLIENT01 DNS Server: `192.168.56.10`
 
 ---
 
