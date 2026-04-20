@@ -4,7 +4,7 @@
 
 This project is a Windows Server and Active Directory home lab designed to simulate common entry-level Help Desk and IT Support tasks in a small business environment.
 
-The lab includes setting up a domain controller, creating Active Directory users and security groups, organizing resources with OUs, and configuring department-based shared folders with Share and NTFS permissions.
+The lab includes setting up a domain controller, creating Active Directory users and security groups, organizing resources with OUs, configuring department-based shared folders with Share and NTFS permissions, joining a Windows 11 client to the domain, and practicing common Help Desk tasks such as domain login testing, password reset, account unlock, and folder access troubleshooting.
 
 ---
 
