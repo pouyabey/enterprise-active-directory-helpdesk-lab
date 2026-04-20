@@ -192,6 +192,26 @@ In this scenario, the domain user `pouya.beyranvand` entered the wrong password 
 
 ---
 
+## Folder Access Troubleshooting
+
+Practiced a common Help Desk troubleshooting scenario where a domain user could not access their department shared folder.
+
+In this scenario, the user `pouya.beyranvand` was unable to access the IT shared folder. I investigated the issue by verifying the logged-in domain account, checking the shared folder path, and reviewing the user's Active Directory group membership.
+
+The root cause was that the user was missing from the `IT_Users` security group. After adding the user back to the correct group and signing out/signing back in, access to the IT shared folder was restored.
+
+| Troubleshooting Step | Result |
+|---|---|
+| Verified domain login on CLIENT01 | Confirmed |
+| Tested access to `\\DC01\IT` | Access denied |
+| Checked AD group membership | `IT_Users` was missing |
+| Added user to `IT_Users` group | Completed |
+| Re-tested folder access | Access restored |
+
+---
+
+
+
 
 ## Screenshots
 
@@ -275,6 +295,15 @@ In this scenario, the domain user `pouya.beyranvand` entered the wrong password 
 ### Unlock Account in Active Directory
 
 ![Unlock Account in ADUC](./screenshots/23-unlock-account-aduc.png)
+
+### Access Denied Before Fix
+
+![Folder Access Denied Before Fix](./screenshots/24-folder-access-denied-before-fix.png)
+
+### Missing Group Membership
+
+![Missing Group Membership](./screenshots/25-missing-group-membership.png)
+
 
 
 
