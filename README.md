@@ -163,6 +163,19 @@ The same user attempted to access the HR shared folder, but access was denied be
 
 ---
 
+## Password Reset Practice
+
+Practiced a common Help Desk task by resetting a domain user's password in Active Directory Users and Computers.
+
+In this scenario, the domain user `pouya.beyranvand` was treated as a user who forgot their password. I reset the password from `DC01` and enabled the option requiring the user to change the password at next logon. The user was then able to sign in successfully from `CLIENT01`.
+
+| Task | Result |
+|---|---|
+| Located user in Active Directory | Completed |
+| Reset user password | Completed |
+| Required password change at next logon | Enabled |
+| Tested login from CLIENT01 | Successful |
+---
 
 
 ## Screenshots
@@ -226,6 +239,14 @@ The same user attempted to access the HR shared folder, but access was denied be
 
 ![HR Folder Access Denied](./screenshots/18-hr-access-denied.png)
 
+
+### Password Reset in Active Directory
+
+![Password Reset in ADUC](./screenshots/19-password-reset-aduc.png)
+
+### Password Reset Success
+
+![Password Reset Success](./screenshots/20-password-reset-success.png)
 
 
 
